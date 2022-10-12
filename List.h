@@ -1,6 +1,3 @@
-//
-// Created by Ann Nikolaeff on 12.10.2022.
-//
 #include <stdbool.h>
 #ifndef LINKED_LIST_TEAM_2_LIST_H
 #define LINKED_LIST_TEAM_2_LIST_H
