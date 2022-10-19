@@ -1,26 +1,39 @@
 #pragma once
 
+#include <stdlib.h>
 #include <stdbool.h>
 
+// comment
 typedef int ListValue;
 
-typedef struct ListElement {
-    ListValue value;
-    ListElement *next;
-} ListElement;
+// comment
+typedef struct ListElement ListElement;
 
+// comment
 typedef struct List List;
 
-// new methods here
-/*
-typedef struct Node{
+List* createList(int *errorCode);
 
-}Node;
-int addHead(Node **node);
-int add(Node **head);
-int delete(Node **node);
-int deleteHead(Node **head);
-bool isEmpty(Node **head);
-int clear(Node **head);
+void deleteList(List *list, int *errorCode);
 
-*/
+void clearList(List *list, int *errorCode);
+
+void pushBack(List *list, ListValue value, int *errorCode);
+
+void insert(List *list, size_t position, ListValue value, int *errorCode);
+
+void erase(List *list, size_t position, ListValue value, int *errorCode);
+
+ListValue getValue(List *list, size_t position, int *errorCode);
+
+size_t getSize(List* list, int *errorCode);
+
+
+
+ListElement* getPointer(List *list, size_t position, int *errorCode);
+
+ListElement* getNext(ListElement* element, int *errorCode);
+
+ListValue getValue(ListElement* element, int *errorCode);
+
+bool isEnd(ListElement* element, int *errorCode);
