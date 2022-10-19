@@ -1,16 +1,39 @@
-//
-// Created by Ann Nikolaeff on 12.10.2022.
-//
-#include <stdbool.h>
-#ifndef LINKED_LIST_TEAM_2_LIST_H
-#define LINKED_LIST_TEAM_2_LIST_H
-typedef struct Node{
+#pragma once
 
-}Node;
-int addHead(Node **node);
-int add(Node **head);
-int delete(Node **node);
-int deleteHead(Node **head);
-bool isEmpty(Node **head);
-int clear(Node **head);
-#endif //LINKED_LIST_TEAM_2_LIST_H
+#include <stdlib.h>
+#include <stdbool.h>
+
+// comment
+typedef int ListValue;
+
+// comment
+typedef struct ListElement ListElement;
+
+// comment
+typedef struct List List;
+
+List* createList(int *errorCode);
+
+void deleteList(List *list, int *errorCode);
+
+void clearList(List *list, int *errorCode);
+
+void pushBack(List *list, ListValue value, int *errorCode);
+
+void insert(List *list, size_t position, ListValue value, int *errorCode);
+
+void erase(List *list, size_t position, ListValue value, int *errorCode);
+
+ListValue getValue(List *list, size_t position, int *errorCode);
+
+size_t getSize(List* list, int *errorCode);
+
+
+
+ListElement* getPointer(List *list, size_t position, int *errorCode);
+
+ListElement* getNext(ListElement* element, int *errorCode);
+
+ListValue getValue(ListElement* element, int *errorCode);
+
+bool isEnd(ListElement* element, int *errorCode);
