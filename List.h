@@ -2,6 +2,17 @@
 
 #include <stdbool.h>
 
+typedef int ListValue;
+
+typedef struct ListElement {
+    ListValue value;
+    ListElement *next;
+} ListElement;
+
+typedef struct List List;
+
+// new methods here
+/*
 typedef struct Node{
 
 }Node;
@@ -12,3 +23,4 @@ int deleteHead(Node **head);
 bool isEmpty(Node **head);
 int clear(Node **head);
 
+*/
